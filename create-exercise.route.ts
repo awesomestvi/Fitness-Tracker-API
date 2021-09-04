@@ -8,15 +8,15 @@ export function createExercise(req: Request, res: Response) {
 
   const changes = req.body;
 
-  const newEcercise = {
+  const newExercise = {
     id: exerciseKeyCounter,
     seqNo: exerciseKeyCounter,
     ...changes,
   };
 
-  EXERCISES[newEcercise.id] = newEcercise;
+  EXERCISES[newExercise.id] = newExercise;
 
   exerciseKeyCounter += 1;
 
-  res.status(200).json(newEcercise);
+  res.status(200).json(newExercise);
 }

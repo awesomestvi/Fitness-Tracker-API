@@ -4,7 +4,7 @@ import { EXERCISES } from "./db-data";
 export function getAllExercises(req: Request, res: Response) {
   console.log("Retrieving exercises data ...");
 
-  res.status(200).json(EXERCISES);
+  res.status(200).json(Object.values(EXERCISES));
 }
 
 export function getExerciseByUrl(req: Request, res: Response) {
