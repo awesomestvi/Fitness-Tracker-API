@@ -33,6 +33,6 @@ export const html = `<style>
   }
 </style>
 <h1>Fitness Tracker API</h1>
-<div>Get all exercises - <a href="/api/exercises">/api/exercises</a></div>
-<div>Finished Exercises - <a href="/api/exercises">/api/exercises</a></div>
+<div style="margin-bottom:10px;">Get all exercises - <a href="/api/exercises">/api/exercises</a></div>
+<div>Finished Exercises - <a href="/api/finished">/api/exercises</a></div>
 `;
