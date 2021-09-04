@@ -44,6 +44,8 @@ export const EXERCISES: any = {
   },
 };
 
+export const FINISHED_EXERCISES: any = {};
+
 export function findExerciseById(exerciseId: number) {
   return EXERCISES[exerciseId];
 }
