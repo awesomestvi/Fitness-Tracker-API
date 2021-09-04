@@ -42,10 +42,14 @@ a:hover, a:focus, a:visited {
 `;
 
 app.get("/", (req, res) => {
+  res.header("Access-Control-Allow-Origin", "*");
+  res.header("Access-Control-Allow-Headers", "X-Requested-With");
   res.send(html);
 });
 
 app.get("/api/exercises", (req, res) => {
+  res.header("Access-Control-Allow-Origin", "*");
+  res.header("Access-Control-Allow-Headers", "X-Requested-With");
   res.send(database);
 });
 
