@@ -1,1 +1,1 @@
-web: ts-node -P tsconfig.json server.ts
+web: node index.js
