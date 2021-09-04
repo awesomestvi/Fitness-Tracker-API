@@ -5,14 +5,12 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "server": "ts-node -P tsconfig.json server.ts"
+    "start": "node index.js"
   },
   "author": "Vishal Chauhan",
   "license": "ISC",
   "dependencies": {
-    "@types/express": "^4.17.13",
-    "express": "^4.17.1",
-    "ts-node": "^10.2.1"
+    "express": "^4.17.1"
   },
   "engines": {
     "node": "14.17.4"
