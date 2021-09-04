@@ -1,5 +1,6 @@
 import * as express from "express";
 import { Application } from "express";
+import { cors } from "cors";
 import { getAllExercises, getExerciseByUrl } from "./get-exercises.route";
 import { saveExercise } from "./save-exercise.route";
 import { createExercise } from "./create-exercise.route";
@@ -13,6 +14,7 @@ const bodyParser = require("body-parser");
 const app: Application = express();
 
 app.use(bodyParser.json());
+app.use(cors());
 
 app.get("/", (req, res) => {
   res.send(html);
