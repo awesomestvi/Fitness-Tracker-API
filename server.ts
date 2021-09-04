@@ -1,6 +1,6 @@
 import * as express from "express";
 import { Application } from "express";
-import { cors } from "cors";
+import * as cors from "cors";
 import { getAllExercises, getExerciseByUrl } from "./get-exercises.route";
 import { saveExercise } from "./save-exercise.route";
 import { createExercise } from "./create-exercise.route";
