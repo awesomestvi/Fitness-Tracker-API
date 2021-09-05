@@ -13,12 +13,15 @@ export function getAllFinishedExercises(req: Request, res: Response) {
   res.status(200).json(Object.values(FINISHED_EXERCISES));
 }
 
-export function getExerciseByUrl(req: Request, res: Response) {
-  const exerciseUrl = req.params["exerciseUrl"];
+export function getFinishedExercisesByUserId(req: Request, res: Response) {
+  const userId = req.params["userId"];
 
-  const exercises: any = Object.values(EXERCISES);
+  const exercises: any = Object.values(FINISHED_EXERCISES);
 
-  const exercise = exercises.find((exercise) => exercise.url == exerciseUrl);
+  const exercise = exercises.filter((exercise) => {
+    console.log(exercise);
+    return exercise.user == userId;
+  });
 
   res.status(200).json(exercise);
 }

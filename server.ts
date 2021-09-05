@@ -4,6 +4,7 @@ import * as cors from "cors";
 import {
   getAllExercises,
   getAllFinishedExercises,
+  getFinishedExercisesByUserId,
 } from "./get-exercises.route";
 import { saveExercise } from "./save-exercise.route";
 import { finishedExercises } from "./finished-exercise.route";
@@ -26,6 +27,8 @@ app.get("/", (req, res) => {
 app.route("/api/exercises").get(getAllExercises);
 
 app.route("/api/finished").get(getAllFinishedExercises);
+
+app.route("/api/finished/:userId").get(getFinishedExercisesByUserId);
 
 app.route("/api/exercise").post(finishedExercises);
 
