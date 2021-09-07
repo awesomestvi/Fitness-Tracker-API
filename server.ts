@@ -32,7 +32,7 @@ app.route("/api/finished/:userId").get(getFinishedExercisesByUserId);
 app.route("/api/exercise").post(finishedExercises);
 app.route("/api/custom").post(customExercise);
 
-app.route("/api/custom/:id").put(saveExercise);
+app.route("/api/exercise/:id").put(saveExercise);
 
 app.route("/api/finished/:id").delete(deleteExercise);
 app.route("/api/custom/:id").delete(deleteCustomExercise);
