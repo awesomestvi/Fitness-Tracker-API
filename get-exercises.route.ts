@@ -19,7 +19,6 @@ export function getFinishedExercisesByUserId(req: Request, res: Response) {
   const exercises: any = Object.values(FINISHED_EXERCISES);
 
   const exercise = exercises.filter((exercise) => {
-    console.log(exercise);
     return exercise.user == userId;
   });
 

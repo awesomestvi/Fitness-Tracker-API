@@ -9,7 +9,7 @@ export function saveExercise(req: Request, res: Response) {
 
   EXERCISES[id] = {
     ...EXERCISES[id],
-    ...changes.changes,
+    ...changes,
   };
 
   res.status(200).json(EXERCISES[id]);
