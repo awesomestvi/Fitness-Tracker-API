@@ -6,7 +6,7 @@ import {
   getAllFinishedExercises,
   getFinishedExercisesByUserId,
 } from "./get-exercises.route";
-import { saveExercise } from "./save-exercise.route";
+import { saveExercise, saveFinishedExercise } from "./save-exercise.route";
 import { finishedExercises } from "./finished-exercise.route";
 import { deleteExercise, deleteCustomExercise } from "./delete-exercise.route";
 import { customExercise } from "./custom-exercise.route";
@@ -33,6 +33,7 @@ app.route("/api/exercise").post(finishedExercises);
 app.route("/api/custom").post(customExercise);
 
 app.route("/api/exercise/:id").put(saveExercise);
+app.route("/api/finished/:id").put(saveFinishedExercise);
 
 app.route("/api/finished/:id").delete(deleteExercise);
 app.route("/api/custom/:id").delete(deleteCustomExercise);
